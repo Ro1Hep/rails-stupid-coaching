@@ -1,0 +1,14 @@
+<h1>Answer Page</h1>
+
+<% if params[:user_ask].include?('?') %>
+  <p><%= params[:user_ask] %> - You</p>
+  <p>Silly question, get dressed and go to work! - Coach</p>
+<% elsif params[:user_ask].include?('I am going to work') %>
+  <p><%= params[:user_ask] %> - You</p>
+  <p>Great! - Coach</p>
+<% else %>
+  <p><%= params[:user_ask] %> - You</p>
+  <p>I dont care, go to work! - Coach</p>
+<% end %>
+
+<%= link_to "Ask another question", ask_path %>
